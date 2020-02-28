@@ -18,6 +18,7 @@ module SlackHtmlToMarkdown
       html.gsub!(/<a href="(?'link'[^"]*)">(?<text>[^<]*)<\/a>/) do
         "<#{$~[:link]}|#{$~[:text]}>"
       end
+      html
     end
   end
 end
